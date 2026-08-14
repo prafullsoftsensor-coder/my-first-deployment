@@ -14,6 +14,14 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/version", (req, res) => {
+  res.json({
+    version: "v2.0",
+    updatedAt: new Date(),
+    feature: "Automatic Deployment Working!",
+  });
+});
+
 app.get("/health", (req, res) => {
   res.send("Server is healthy and running fine!");
 });
